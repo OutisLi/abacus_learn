@@ -1,0 +1,9 @@
+{
+    "pdosfile": "PDOS",
+    "efermi": 8.27771540465,
+    "energy_range": [-5,7],
+    "dos_range": [0,5],
+    "figsize":[14,10],
+    "species":{"Mg":[0,1,2],"O":[0,1,2]},
+    "pdosfig": "pdos.png"
+}

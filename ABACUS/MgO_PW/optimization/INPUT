@@ -1,0 +1,13 @@
+INPUT_PARAMETERS
+suffix 			MgO
+ntype 			2
+pseudo_dir 		../../PP_ORB
+orbital_dir 		../../PP_ORB
+ecutwfc 		100 
+scf_thr 		1e-6 
+basis_type 		pw
+calculation 		cell-relax
+force_thr_ev		0.01
+stress_thr		5
+relax_nmax		100
+out_stru		1

@@ -1,0 +1,19 @@
+{
+    "structures":    ["confs"],
+    "interaction": {
+        "type":          "deepmd",
+        "model":         "frozen_model.pb",
+        "type_map":     {"Al": 0}
+    },
+    "relaxation": {
+        "cal_type":      "relaxation",
+        "cal_setting":  {"relax_pos":true,
+                         "relax_shape":true,
+                         "relax_vol":true,
+                         "etol": 1e-12,
+                         "ftol": 1e-6,
+                         "maxiter": 5000,
+                         "maximal": 50000}
+    }
+}
+

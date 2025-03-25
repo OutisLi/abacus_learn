@@ -1,0 +1,8 @@
+{
+    "tdosfile": "TDOS",
+    "efermi": 6.1362158,
+    "energy_range": [-5,7],
+    "dos_range": [0,5],
+    "figsize":[14,10],
+    "tdosfig": "tdos.png"
+}

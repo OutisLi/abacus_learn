@@ -1,0 +1,9 @@
+{
+	"bandfile" : "BANDS_1.dat",
+	"efermi" : 8.27,
+	"energy_range"	: [-4, 9],
+	"kptfile" : "KPT"
+}
+
+
+

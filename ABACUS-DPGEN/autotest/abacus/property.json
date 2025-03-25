@@ -1,0 +1,39 @@
+{
+    "structures":    ["confs"],
+    "interaction": {
+        "type":         "abacus",
+        "incar":        "./INPUT.rlx",
+        "potcar_prefix":"./",
+        "potcars":      {"Al": "Al.PD04.PBE.UPF"},
+	"orb_files": {"Al":"Al_gga_10au_100Ry_3s3p2d.orb"}
+    },
+    "properties": [
+        {
+         "type":         "eos",
+	 "vol_start":    0.9,
+         "vol_end":      1.1,
+         "vol_step":     0.02
+        },
+	 {
+         "type":         "elastic",
+	 "skip":         true,
+         "norm_deform":   1e-2,
+         "shear_deform":  1e-2
+        },
+        {
+         "type":         "vacancy",
+         "skip":         true,
+	 "supercell":    [2, 2, 2]
+        },
+        {
+         "type":           "surface",
+         "skip":         true,
+	 "min_slab_size":  15,
+         "min_vacuum_size":11,
+         "pert_xz":        0.01,
+         "max_miller":     3,
+         "cal_type":       "static"
+        }
+        ]
+}
+

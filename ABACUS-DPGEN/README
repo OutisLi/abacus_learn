@@ -1,0 +1,7 @@
+Al example for the running of ABACUS+dpgen init_bulk/run/autotest
+There are two folders 'train' (files for running init_bulk/run) and 'autotest' (files for running autotest)
+
+1. Prepare:     `cd train`, and modify the value of "email", "password", and "program_id" in machine.json. There are 3 palces for each key that need to be modified
+2-3. Init_bulk and run:   `nohup bash run.sh &`
+4. Autotest-abacus:       `cd ../autotest/abacus`, and `nohup bash run.sh &`
+5. Autotest-dp:           `cd ../dp`, and `nohup bash run.sh &`

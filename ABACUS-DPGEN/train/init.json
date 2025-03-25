@@ -1,0 +1,23 @@
+{
+    "init_fp_style":    "ABACUS",
+    "stages":           [1,2,3,4],
+    "cell_type":        "bcc",
+    "super_cell":       [1, 1, 1],
+    "elements":         ["Al"],
+    "from_poscar":      true,
+    "from_poscar_path": "STRU",
+    "potcars":          ["Al.PD04.PBE.UPF"],
+    "orb_files":        ["Al_gga_10au_100Ry_3s3p2d.orb"],
+    "relax_incar":      "./INPUT.rlx",
+    "md_incar" :        "./INPUT.md",
+    "_relax_kpt":        "./KPT.rlx",
+    "_md_kpt":           "./KPT.md",
+    "md_nstep" :	5,
+    "scale":            [0.98,1.0],
+    "skip_relax":       false,
+    "pert_numb":        2,
+    "pert_box":         0.03,
+    "pert_atom":        0.01,
+    "coll_ndata":       20,
+    "_comment":         "that's all"
+}

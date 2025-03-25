@@ -1,0 +1,14 @@
+INPUT_PARAMETERS
+suffix 			MgO
+ntype 			2
+pseudo_dir 		../../PP_ORB
+orbital_dir 		../../PP_ORB
+ecutwfc 		100 
+scf_thr 		1e-6 
+basis_type 		lcao
+calculation 		nscf 
+init_chg		file
+out_band		1
+out_dos			1
+latname			fcc
+symmetry		0

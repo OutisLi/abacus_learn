@@ -1,0 +1,12 @@
+INPUT_PARAMETERS
+suffix 			MgO
+ntype 			2
+pseudo_dir 		../../PP_ORB
+orbital_dir 		../../PP_ORB
+ecutwfc 		100 
+scf_thr 		1e-6 
+basis_type 		pw
+calculation 		scf 
+out_chg			1
+symmetry		1
+latname			fcc

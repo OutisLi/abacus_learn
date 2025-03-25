@@ -1,0 +1,39 @@
+INPUT_PARAMETERS
+#Parameters (1.General)
+suffix          B
+calculation     nscf
+esolver_type    sdft
+nbands          7
+nbands_sto      16
+nche_sto        26
+seed_sto        20000
+symmetry        0
+kpar            2
+bndpar          1
+pseudo_dir      ../../PP_ORB
+cal_stress      1
+cal_force       1
+out_chg         1
+
+#Parameters (2.Iteration)
+ecutwfc         100
+scf_thr         1e-8
+scf_nmax        50
+
+#Parameters (3.Basis)
+basis_type      pw
+gamma_only      0
+
+#Parameters (4.Smearing)
+smearing_method fd
+smearing_sigma  6.32088752 # 1 Ry = 13.6056923 eV
+
+#Parameters (5.Mixing)
+mixing_type     broyden
+mixing_beta     0.7
+
+#Parameters (DOS)
+out_dos         1
+dos_edelta_ev   0.5
+dos_sigma       1
+dos_nche        390
