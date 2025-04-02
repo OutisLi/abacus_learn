@@ -23,9 +23,8 @@ cal_stress 1
 
 #MD
 chg_extrap second-order
-md_type 2
+md_type nvt
 md_tfirst 300
 md_tlast  300 
-md_nstep 10 
-md_tfirst 10 
+md_nstep 1
 md_tfreq 0.5

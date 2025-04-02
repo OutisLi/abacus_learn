@@ -1,6 +1,6 @@
 {
     "init_fp_style":    "ABACUS",
-    "stages":           [1,2,3,4],
+    "stages":           [1],
     "cell_type":	"diamond",
     "super_cell":	[1, 1, 1],
     "elements":		["Si","C"],
@@ -12,7 +12,7 @@
     "md_incar" : 	"./INPUT_md",
     "relax_kpt":  	"./KPT",
     "md_kpt":     	"./KPT",
-    "md_nstep":         10,
+    "md_nstep":         1,
     "scale":		[0.99,1.00,1.01],
     "skip_relax":	false,
     "pert_numb":	10,
