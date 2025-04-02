@@ -1,13 +1,13 @@
 {
   "api_version": "1.0",
   "deepmd_version": "3.0.1",
-  "train" :[
+  "train": [
     {
       "command": "conda run -n dpmd --no-capture-output dp",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
-        "local_root" : "./",
+        "local_root": "./",
         "remote_root": "/home/outis/Learning/Abacus/example/2_abacus-dpgen/init"
       },
       "resources": {
@@ -19,13 +19,13 @@
       }
     }
   ],
-  "model_devi":
-    [{
+  "model_devi": [
+    {
       "command": "conda run -n dpmd --no-capture-output lmp -i input.lammps -v restart 0",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
-        "local_root" : "./",
+        "local_root": "./",
         "remote_root": "/home/outis/Learning/Abacus/example/2_abacus-dpgen/init"
       },
       "resources": {
@@ -37,21 +37,21 @@
       }
     }
   ],
-  "fp":
-    [{
-      "command": "conda activate abacus_conda && OMP_NUM_THREADS=24 mpirun -n 1 abacus",
+  "fp": [
+    {
+      "command": "conda activate abacus_conda && mpiexec -n 16 abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
-        "local_root" : "./",
-        "remote_root": "/home/outis/Learning/Abacus/example/2_abacus-dpgen/init"
+        "local_root": "./",
+        "remote_root": "./"
       },
       "resources": {
         "number_node": 1,
-        "cpu_per_node": 1,
+        "cpu_per_node": 16,
         "gpu_per_node": 1,
-        "group_size": 4,
-        "source_list": ["/home/outis/.bashrc", "/home/outis/Learning/Abacus/example/2_abacus-dpgen/conda_init.sh"]
+        "group_size": 1,
+        "source_list": ["~/.bashrc", "~/.conda_init.sh"]
       }
     }
   ]
