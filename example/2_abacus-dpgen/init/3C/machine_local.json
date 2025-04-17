@@ -33,13 +33,13 @@
         "cpu_per_node": 1,
         "gpu_per_node": 1,
         "group_size": 4,
-        "source_list": ["/home/outis/.bashrc", "/home/outis/Learning/Abacus/example/2_abacus-dpgen/conda_init.sh"]
+        "source_list": ["~/.bashrc", "~/.conda_init.sh"]
       }
     }
   ],
   "fp": [
     {
-      "command": "conda activate abacus_conda && mpiexec -n 16 abacus",
+      "command": "conda activate abacus_conda && mpirun -n 16 abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
