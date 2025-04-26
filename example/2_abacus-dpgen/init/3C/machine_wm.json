@@ -68,7 +68,7 @@
         "module_list": ["mpi/2021.8.0", "mkl/2023.0.0"],
         "time_limit": "120:0:0",
         "queue_name": "C064M0256G",
-        "qos": "low",
+        "qos": "high",
         "group_size": 1,
         "_comment": "that's all"
       }
