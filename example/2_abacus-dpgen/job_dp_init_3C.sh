@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH -o %j.out
 #SBATCH -p C064M0256G
-#SBATCH --qos=low
+#SBATCH --qos=high
 #SBATCH -J dp_init_3C
 #SBATCH --nodes=1
 #SBATCH --ntasks=64
