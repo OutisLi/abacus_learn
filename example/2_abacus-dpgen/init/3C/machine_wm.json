@@ -60,16 +60,17 @@
       },
       "resources": {
         "account": "hpc0006168316",
-        "numb_node": 1,
+        "batch_type": "Slurm",
+        "number_node": 1,
         "cpu_per_node": 64,
         "gpu_per_node": 0,
         "exclude_list": [],
-        "source_list": ["/lustre/home/2201210084/.bashrc", "/lustre/home/2201210084/conda_init.sh"],
-        "module_list": ["mpi/latest", "mkl/latest"],
         "time_limit": "120:00:00",
         "queue_name": "C064M0256G",
-        "custom_flags": ["#SBATCH -o %j.out", "#SBATCH --qos=high", "#SBATCH -J dp_init_3C", "#SBATCH --nodes=1", "#SBATCH --ntasks=64"],
-        "group_size": 1,
+        "qos": "high",
+        "group_size": 5,
+        "module_list": ["mpi/latest", "mkl/latest"],
+        "source_list": ["/lustre/home/2201210084/.bashrc", "/lustre/home/2201210084/conda_init.sh"],
         "_comment": "that's all"
       }
     }
