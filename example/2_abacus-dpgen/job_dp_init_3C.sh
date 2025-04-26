@@ -13,7 +13,8 @@
 # 获取开始时间戳
 start_time=$(date +%s)
 
-dpgen init_bulk /lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C/param.json /lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C/machine_wm.json
+cd /lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C
+dpgen init_bulk param.json machine_wm.json
 
 # 获取结束时间戳
 end_time=$(date +%s)
