@@ -39,7 +39,7 @@
   ],
   "fp": [
     {
-      "command": "conda activate abacus_conda && mpirun -n 16 abacus",
+      "command": "conda activate abacus_conda && mpirun -n 64 abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
@@ -48,10 +48,11 @@
       },
       "resources": {
         "number_node": 1,
-        "cpu_per_node": 16,
+        "cpu_per_node": 64,
         "gpu_per_node": 1,
-        "group_size": 1,
-        "source_list": ["~/.bashrc", "~/.conda_init.sh"]
+        "group_size": 0,
+        "source_list": ["~/.bashrc", "~/.conda_init.sh"],
+        "_comment": "that's all"
       }
     }
   ]

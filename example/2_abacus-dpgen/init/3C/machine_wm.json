@@ -54,7 +54,7 @@
       "command": "conda activate abacus_conda && mpirun -n 64 abacus",
       "machine": {
         "batch_type": "Slurm",
-        "context_type": "local",
+        "context_type": "LocalContext",
         "local_root": "./",
         "remote_root": "/lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C"
       },
