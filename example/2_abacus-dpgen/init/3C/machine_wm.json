@@ -68,7 +68,7 @@
         "module_list": ["mpi/latest", "mkl/latest"],
         "time_limit": "120:00:00",
         "queue_name": "C064M0256G",
-        "qos": "high",
+        "custom_flags": ["#SBATCH -o %j.out", "#SBATCH --qos=high", "#SBATCH -J dp_init_3C", "#SBATCH --nodes=1", "#SBATCH --ntasks=64"],
         "group_size": 1,
         "_comment": "that's all"
       }
