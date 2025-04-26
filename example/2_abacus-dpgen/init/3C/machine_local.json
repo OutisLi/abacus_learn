@@ -39,7 +39,7 @@
   ],
   "fp": [
     {
-      "command": "conda activate abacus_conda && mpirun -n 64 abacus",
+      "command": "mpirun -n 64 abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
