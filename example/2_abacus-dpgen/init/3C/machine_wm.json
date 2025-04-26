@@ -51,11 +51,12 @@
   ],
   "fp": [
     {
+      "command": "conda activate abacus_conda && mpirun -n 64 abacus",
       "machine": {
         "batch_type": "Slurm",
         "context_type": "local",
         "local_root": "./",
-        "remote_root": "/lustre/home/2001110299/DPGEN-C/DPGEN-WORKING-DIR/fp"
+        "remote_root": "/lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C"
       },
       "resources": {
         "account": "hpc0006168316",
@@ -63,16 +64,14 @@
         "cpu_per_node": 64,
         "gpu_per_node": 0,
         "exclude_list": [],
-        "with_mpi": false,
-        "source_list": ["/lustre/home/2001110299/.bashrc"],
+        "source_list": ["/lustre/home/2201210084/.bashrc", "/lustre/home/2201210084/conda_init.sh"],
         "module_list": ["mpi/2021.8.0", "mkl/2023.0.0"],
         "time_limit": "120:0:0",
         "queue_name": "C064M0256G",
         "qos": "low",
-        "group_size": 5,
+        "group_size": 1,
         "_comment": "that's all"
-      },
-      "command": "mpirun -np 64 vasp_std-6.3.2-intel"
+      }
     }
   ]
 }
