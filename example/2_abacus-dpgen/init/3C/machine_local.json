@@ -39,7 +39,7 @@
   ],
   "fp": [
     {
-      "command": "mpirun -n 16 abacus",
+      "command": "mpirun -n 16 --use-hwthread-cpus abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",

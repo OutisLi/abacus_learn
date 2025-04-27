@@ -51,7 +51,7 @@
   ],
   "fp": [
     {
-      "command": "mpirun -n 64 abacus",
+      "command": "mpirun -n 16 abacus",
       "machine": {
         "batch_type": "Slurm",
         "context_type": "LocalContext",
@@ -62,15 +62,19 @@
         "account": "hpc0006168316",
         "batch_type": "Slurm",
         "number_node": 1,
-        "cpu_per_node": 64,
-        "gpu_per_node": 0,
+        "cpu_per_node": 16,
+        "gpu_per_node": 1,
         "exclude_list": [],
         "time_limit": "120:00:00",
-        "queue_name": "C064M0256G",
+        "queue_name": "GPU40G",
         "group_size": 0,
-        "module_list": ["mpi/latest", "mkl/latest"],
-        "source_list": ["/lustre/home/2201210084/.bashrc", "/lustre/home/2201210084/conda_init.sh", "$HOME/Software/abacus-develop/toolchain/abacus_env.sh"],
-        "custom_flags": ["#SBATCH --qos=high"],
+        "module_list": ["mpi/latest", "mkl/latest", "cuda/12.6.0"],
+        "source_list": [
+          "/lustre/home/2201210084/.bashrc",
+          "/lustre/home/2201210084/conda_init.sh",
+          "$HOME/Software/abacus-develop_gpu/toolchain/abacus_env.sh"
+        ],
+        "custom_flags": ["#SBATCH --qos=low"],
         "_comment": "that's all"
       }
     }
