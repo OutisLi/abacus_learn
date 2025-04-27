@@ -67,10 +67,10 @@
         "exclude_list": [],
         "time_limit": "120:00:00",
         "queue_name": "C064M0256G",
-        "qos": "high",
-        "group_size": 5,
+        "group_size": 0,
         "module_list": ["mpi/latest", "mkl/latest"],
         "source_list": ["/lustre/home/2201210084/.bashrc", "/lustre/home/2201210084/conda_init.sh"],
+        "custom_flags": ["#SBATCH --qos=high"],
         "_comment": "that's all"
       }
     }
