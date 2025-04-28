@@ -60,7 +60,6 @@
       },
       "resources": {
         "account": "hpc0006168316",
-        "batch_type": "Slurm",
         "number_node": 1,
         "cpu_per_node": 16,
         "gpu_per_node": 1,

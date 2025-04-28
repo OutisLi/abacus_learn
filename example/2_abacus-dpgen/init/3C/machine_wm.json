@@ -51,16 +51,15 @@
   ],
   "fp": [
     {
-      "command": "mpirun -n 64 abacus",
+      "command": "OMP_NUM_THREADS=64 abacus",
       "machine": {
         "batch_type": "Slurm",
         "context_type": "LocalContext",
         "local_root": "./",
-        "remote_root": "/lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C"
+        "remote_root": "./"
       },
       "resources": {
         "account": "hpc0006168316",
-        "batch_type": "Slurm",
         "number_node": 1,
         "cpu_per_node": 64,
         "gpu_per_node": 0,
