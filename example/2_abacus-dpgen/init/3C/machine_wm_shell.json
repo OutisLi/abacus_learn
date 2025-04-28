@@ -59,14 +59,14 @@
         "batch_type": "Shell",
         "context_type": "LocalContext",
         "local_root": "./",
-        "remote_root": "$HOME/abacus_learn/example/2_abacus-dpgen/init/3C"
+        "remote_root": "/lustre/home/2201210084/abacus_learn/example/2_abacus-dpgen/init/3C"
       },
       "resources": {
         "account": "hpc0006168316",
         "numb_node": 1,
         "cpu_per_node": 64,
         "gpu_per_node": 0,
-        "group_size": 1,
+        "group_size": 0,
         "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh"],
         "module_list": ["mpi/2021.8.0", "mkl/2023.0.0"],
         "_comment": "that's all"
