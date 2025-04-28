@@ -51,7 +51,7 @@
   ],
   "fp": [
     {
-      "command": "mpirun -n 16 abacus",
+      "command": "OMP_NUM_THREADS=16 abacus",
       "machine": {
         "batch_type": "Slurm",
         "context_type": "LocalContext",

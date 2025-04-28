@@ -39,7 +39,7 @@
   ],
   "fp": [
     {
-      "command": "mpirun -n 16 --use-hwthread-cpus abacus",
+      "command": "OMP_NUM_THREADS=64 abacus",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",
@@ -48,7 +48,7 @@
       },
       "resources": {
         "number_node": 1,
-        "cpu_per_node": 16,
+        "cpu_per_node": 64,
         "gpu_per_node": 1,
         "group_size": 0,
         "source_list": ["$HOME/.bashrc", "$HOME/.conda_init.sh", "$HOME/Software/abacus-develop/toolchain/abacus_env.sh"],
