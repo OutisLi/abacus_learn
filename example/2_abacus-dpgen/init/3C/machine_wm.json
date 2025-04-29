@@ -51,7 +51,7 @@
   ],
   "fp": [
     {
-      "command": "OMP_NUM_THREADS=64 abacus",
+      "command": "mpirun -np 64 abacus",
       "machine": {
         "batch_type": "Slurm",
         "context_type": "LocalContext",
@@ -68,7 +68,7 @@
         "queue_name": "C064M0256G",
         "group_size": 0,
         "module_list": ["mpi/latest", "mkl/latest"],
-        "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh", "$HOME/Software/abacus-develop/toolchain/abacus_env.sh"],
+        "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh", "$HOME/Software/abacus-develop_intel/toolchain/abacus_env.sh"],
         "custom_flags": ["#SBATCH --qos=high"],
         "_comment": "that's all"
       }
