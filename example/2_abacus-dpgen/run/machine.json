@@ -93,7 +93,6 @@
               "disk_size": 100,
               "scass_type":"c32_m64_cpu",
               "platform": "ali",
-              "job_type": "container",
               "image_name":"registry.dp.tech/dptech/abacus:3.2.0",   
               "on_demand":0
             }
