@@ -3,7 +3,7 @@
   "deepmd_version": "3.0.1",
   "train": [
     {
-      "command": "conda run -n dpmd_conda --no-capture-output dp --pt",
+      "command": "conda run -n dpmd_conda --no-capture-output dp",
       "machine": {
         "batch_type": "Shell",
         "context_type": "LocalContext",

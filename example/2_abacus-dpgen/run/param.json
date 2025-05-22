@@ -3,11 +3,14 @@
   "mass_map": [28.085, 12.011],
   "init_data_prefix": "./init_data",
   "init_data_sys": ["3C", "2H"],
+  "init_batch_size": [512, 512],
   "sys_format": "abacus/stru",
   "sys_configs_prefix": "./init_conf",
   "sys_configs": [["3C/sys-0032-0032/scale-1.000/00****/STRU"], ["2H/sys-0036-0036/scale-1.000/00****/STRU"]],
+  "sys_batch_size": [512, 512],
   "_comment": " that's all ",
   "numb_models": 4,
+  "train_backend": "pytorch",
   "default_training_param": {
     "model": {
       "type_map": ["Si", "C"],
@@ -42,10 +45,7 @@
       "limit_pref_v": 0.0
     },
     "training": {
-      "training_data": {
-        "batch_size": 10240
-      },
-      "stop_batch": 400000,
+      "stop_batch": 4000,
       "disp_file": "lcurve.out",
       "disp_freq": 100,
       "save_freq": 1000,
