@@ -1,12 +1,14 @@
 {
-  "deepmd_version": "2.2.11",
+  "api_version": "1.0",
+  "deepmd_version": "3.0.1",
   "train": [
     {
+      "command": "conda run -n dpmd_conda --no-capture-output dp --pt",
       "machine": {
         "batch_type": "Slurm",
-        "context_type": "local",
+        "context_type": "LocalContext",
         "local_root": "./",
-        "remote_root": "/lustre/home/2001110299/DPGEN-C/DPGEN-WORKING-DIR/train"
+        "remote_root": "./"
       },
       "resources": {
         "account": "hpc0006168316",
@@ -14,22 +16,27 @@
         "gpu_per_node": 1,
         "cpu_per_node": 16,
         "queue_name": "GPU80G",
-        "qos": "low",
-        "exclude_list": [],
-        "source_list": [],
-        "module_list": [],
-        "envs": { "DP_INFER_BATCH_SIZE": 8192 },
         "time_limit": "120:0:0",
-        "group_size": 1
-      },
-      "command": "dp"
+        "group_size": 1,
+        "exclude_list": [],
+        "module_list": ["mpi/latest", "mkl/latest", "cuda/12.6.0"],
+        "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh"],
+        "custom_flags": ["#SBATCH --qos=high"],
+        "envs": {
+          "DP_INTERFACE_PREC": "low",
+          "OMP_NUM_THREADS": 16,
+          "DP_INTRA_OP_PARALLELISM_THREADS": 16,
+          "DP_INTER_OP_PARALLELISM_THREADS": 1
+        }
+      }
     }
   ],
   "model_devi": [
     {
+      "command": "mpirun -np 1 /lustre/home/2001110299/.local/deepmdkit-3.0.0-gpu/bin/lmp",
       "machine": {
         "batch_type": "Slurm",
-        "context_type": "local",
+        "context_type": "LocalContext",
         "local_root": "./",
         "remote_root": "/lustre/home/2001110299/DPGEN-C/DPGEN-WORKING-DIR/model_devi"
       },
@@ -39,14 +46,19 @@
         "gpu_per_node": 1,
         "cpu_per_node": 16,
         "queue_name": "GPU80G",
-        "exclude_list": [],
-        "source_list": ["/lustre/home/2001110299/.bashrc"],
-        "module_list": ["mpi/2021.8.0"],
         "time_limit": "120:0:0",
-        "qos": "low",
-        "group_size": 1
-      },
-      "command": "mpirun -np 1 /lustre/home/2001110299/.local/deepmdkit-3.0.0-gpu/bin/lmp"
+        "group_size": 1,
+        "exclude_list": [],
+        "module_list": ["mpi/latest", "mkl/latest", "cuda/12.6.0"],
+        "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh"],
+        "custom_flags": ["#SBATCH --qos=high"],
+        "envs": {
+          "DP_INTERFACE_PREC": "low",
+          "OMP_NUM_THREADS": 16,
+          "DP_INTRA_OP_PARALLELISM_THREADS": 16,
+          "DP_INTER_OP_PARALLELISM_THREADS": 1
+        }
+      }
     }
   ],
   "fp": [
@@ -63,12 +75,12 @@
         "number_node": 1,
         "cpu_per_node": 64,
         "gpu_per_node": 0,
-        "exclude_list": [],
-        "time_limit": "120:00:00",
         "queue_name": "C064M0256G",
+        "time_limit": "120:00:00",
         "group_size": 1,
         "module_list": ["mpi/latest", "mkl/latest"],
         "source_list": ["$HOME/.bashrc", "$HOME/conda_init.sh", "$HOME/Software/abacus-develop_intel/toolchain/abacus_env.sh"],
+        "exclude_list": [],
         "custom_flags": ["#SBATCH --qos=high"],
         "_comment": "that's all"
       }

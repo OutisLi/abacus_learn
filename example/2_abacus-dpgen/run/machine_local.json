@@ -14,12 +14,12 @@
         "number_node": 1,
         "cpu_per_node": 32,
         "gpu_per_node": 1,
-        "para_deg": 4,
-        "group_size": 1,
+        "group_size": 0,
         "envs": {
-          "DP_INFER_BATCH_SIZE": 81920,
           "DP_INTERFACE_PREC": "low",
-          "NUM_WORKERS": 32
+          "OMP_NUM_THREADS": 16,
+          "DP_INTRA_OP_PARALLELISM_THREADS": 16,
+          "DP_INTER_OP_PARALLELISM_THREADS": 2
         },
         "source_list": ["$HOME/.bashrc", "$HOME/.conda_init.sh"]
       }

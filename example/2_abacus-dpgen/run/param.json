@@ -42,10 +42,12 @@
       "limit_pref_v": 0.0
     },
     "training": {
+      "training_data": {
+        "batch_size": 10240
+      },
       "stop_batch": 400000,
       "disp_file": "lcurve.out",
       "disp_freq": 100,
-      "numb_test": 10,
       "save_freq": 1000,
       "save_ckpt": "model.ckpt",
       "disp_training": true,
