@@ -3,11 +3,11 @@
   "mass_map": [28.085, 12.011],
   "init_data_prefix": "./init_data",
   "init_data_sys": ["3C", "2H"],
-  "init_batch_size": [512, 512],
+  "init_batch_size": [128, 128],
   "sys_format": "abacus/stru",
   "sys_configs_prefix": "./init_conf",
   "sys_configs": [["3C/sys-0032-0032/scale-1.000/00****/STRU"], ["2H/sys-0036-0036/scale-1.000/00****/STRU"]],
-  "sys_batch_size": [512, 512],
+  "sys_batch_size": [128, 128],
   "_comment": " that's all ",
   "numb_models": 4,
   "train_backend": "pytorch",
@@ -34,7 +34,7 @@
       "type": "exp",
       "start_lr": 0.001,
       "stop_lr": 3.5e-8,
-      "decay_steps": 2000
+      "decay_steps": 1000
     },
     "loss": {
       "start_pref_e": 0.02,
@@ -45,7 +45,7 @@
       "limit_pref_v": 0.0
     },
     "training": {
-      "stop_batch": 4000,
+      "stop_batch": 15000,
       "disp_file": "lcurve.out",
       "disp_freq": 100,
       "save_freq": 1000,
